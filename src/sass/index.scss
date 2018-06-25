@@ -1,0 +1,136 @@
+/*清除默认样式*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, div, section, figure { 
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box;
+}
+fieldset, img { border:none; }
+em, i, b, strong{ 
+    font-style:normal; 
+    font-weight:normal; 
+}
+ul, ol { list-style:none; } 
+a {text-decoration:none; }
+
+html,body{
+    height: 100%;
+}
+/*侧边栏*/
+.sideBar{
+    width: 35px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    background-color: black;
+    opacity: 0.8;
+}
+
+/*头部*/
+
+.header{
+    width: 100%;
+    height: 193px;
+}
+
+/*头部上方链接*/
+
+.header_top{
+    width: 100%;
+    height: 31px;
+    border-bottom: 1px solid #ddd; 
+    .header_top_wrap{
+        width: 1153px;
+        height: 31px;
+        margin: 0 auto;
+        /*登陆注册链接*/
+        p{
+            width: 222px;
+            height: 31px;
+            border-left: 1px solid #eee;
+            border-right: 1px solid #eee;
+            border-bottom: 1px solid #fff;
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+            line-height: 31px;
+            margin-left: 100px;
+            float: left;
+            a{
+                color: #dc4f45;
+                padding: 0 4px;
+            }
+        }
+        /*右边链接*/
+        ul{
+            float: right;
+            height: 31px;
+            li{
+                height: 18px;
+                float: left;
+                margin-top: 8px;
+                padding: 0 10px;
+                border-left: 1px solid #eee;
+                line-height: 15px;
+                a{                   
+                    font-size: 12px;                                                       
+                    color: #999;
+                }   
+            }
+            li:first-child a{
+               border-left: none; 
+            }
+        }
+    }  
+}
+
+/*头部中间logo*/
+.header_middle{
+    width: 100%;
+    height: 100px;
+    .header_middle_wrap{
+        width: 1153px;
+        height: 100px;
+        margin: 0 auto;
+        .logo h1{
+            float: left;
+            margin-top: 10px;
+            a::after{
+                content: "micamika";
+                display: none;
+            }
+        }
+        .code{           
+            float: left;
+            margin-left: 30px;
+            margin-top: 16px;
+            img{
+                width: 70px;
+                height: 70px;
+            }
+        }
+        .phone{
+            float: left;
+            margin-left: 270px;
+            margin-top: 52px;
+            font-size: 18px;
+            color: #dc4f45;
+        }       
+        .cart{
+            width: 150px;
+            height: 40px;
+            float: right;
+            padding-right: 5px;
+            padding-top: 10px;
+            text-align: right;
+            margin-top: 40px;
+            background: url(../img/index_img/main.png) no-repeat 12px -27px;
+            a{
+               font-size: 18px;
+               color: #dc4f45; 
+            }
+            
+        }
+        
+    }
+}
+
