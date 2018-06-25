@@ -15,122 +15,258 @@ a {text-decoration:none; }
 html,body{
     height: 100%;
 }
-/*侧边栏*/
-.sideBar{
-    width: 35px;
-    height: 100%;
-    position: fixed;
-    right: 0;
-    background-color: black;
-    opacity: 0.8;
-}
 
-/*头部*/
-
-.header{
+/*主页内容*/
+.content{
     width: 100%;
-    height: 193px;
-}
-
-/*头部上方链接*/
-
-.header_top{
-    width: 100%;
-    height: 31px;
-    border-bottom: 1px solid #ddd; 
-    .header_top_wrap{
-        width: 1153px;
-        height: 31px;
-        margin: 0 auto;
-        /*登陆注册链接*/
-        p{
-            width: 222px;
-            height: 31px;
-            border-left: 1px solid #eee;
-            border-right: 1px solid #eee;
-            border-bottom: 1px solid #fff;
-            text-align: center;
-            color: #999;
-            font-size: 12px;
-            line-height: 31px;
-            margin-left: 100px;
-            float: left;
-            a{
-                color: #dc4f45;
-                padding: 0 4px;
-            }
-        }
-        /*右边链接*/
-        ul{
-            float: right;
-            height: 31px;
+    min-height: 2624px;
+    position: relative;
+    /*轮播图*/
+    .banner{
+        height: 589px;
+        position: relative;
+        overflow: hidden;
+        .banner_img{
+            width: 100%;           
             li{
-                height: 18px;
+                position: absolute;
+                left: 50%;
+                margin-left: -960px;
+            }
+            .leftArrow{
+                width: 45px;
+                height: 82px;
+                position: absolute;
+                top: 253px;
+                background: url(../img/index_img/but1.png) no-repeat -105px 0;
+            }
+            .leftArrow:hover{
+                background: url(../img/index_img/but2.png) no-repeat -105px 0;
+            }
+            .rightArrow{
+                width: 45px;
+                height: 82px;
+                position: absolute;
+                right: 35px;
+                top: 253px;
+                background: url(../img/index_img/but1.png) no-repeat 0 0;
+            }
+            .rightArrow:hover{
+                background: url(../img/index_img/but2.png) no-repeat 0 0;
+            }
+        }
+        .list{
+            position: absolute;
+            right: 40px;
+            bottom: 10px;
+            li{
+                width: 20px;
+                height: 20px;
                 float: left;
-                margin-top: 8px;
-                padding: 0 10px;
-                border-left: 1px solid #eee;
-                line-height: 15px;
-                a{                   
-                    font-size: 12px;                                                       
-                    color: #999;
-                }   
+                margin-left: 2px;
+                text-align: center;
+                line-height: 20px;
+                background-color: #fff;
+                a{
+                    color: #666;
+                }
             }
-            li:first-child a{
-               border-left: none; 
+            li:hover{
+                background: #dc4f45;
             }
-        }
-    }  
-}
-
-/*头部中间logo*/
-.header_middle{
-    width: 100%;
-    height: 100px;
-    .header_middle_wrap{
-        width: 1153px;
-        height: 100px;
-        margin: 0 auto;
-        .logo h1{
-            float: left;
-            margin-top: 10px;
-            a::after{
-                content: "micamika";
-                display: none;
-            }
-        }
-        .code{           
-            float: left;
-            margin-left: 30px;
-            margin-top: 16px;
-            img{
-                width: 70px;
-                height: 70px;
-            }
-        }
-        .phone{
-            float: left;
-            margin-left: 270px;
-            margin-top: 52px;
-            font-size: 18px;
-            color: #dc4f45;
-        }       
-        .cart{
-            width: 150px;
-            height: 40px;
-            float: right;
-            padding-right: 5px;
-            padding-top: 10px;
-            text-align: right;
-            margin-top: 40px;
-            background: url(../img/index_img/main.png) no-repeat 12px -27px;
-            a{
-               font-size: 18px;
-               color: #dc4f45; 
-            }
-            
-        }
-        
+        }                
     }
+    /*立即购买*/
+    .purchase{
+        width: 940px;
+        height: 92px;
+        position: absolute;
+        background: url(../img/index_img/bj1.png);
+        left: 50%;
+        top: 546px;
+        margin-left: -470px;
+        .purchase_left{
+            width: 80px;
+            height: 92px;
+            float: left;
+            font-size: 16px;
+            color: #fff;
+            margin-left: 42px;
+            padding-top: 22px;
+        }
+        .purchase_middle{
+            width: 174px;
+            height: 50px;
+            float: left;
+            margin-top: 21px;
+            margin-left: 205px;
+            line-height: 50px;
+            font-size: 18px;
+            color: #fff;
+            padding-left: 30px;
+            background: url(../img/index_img/main.png) no-repeat 0px -165px;
+        }
+        .purchase_right{
+            input{
+                width: 130px;
+                height: 36px;
+                background-color: #fff;
+                float: left;
+                border: none;
+                margin-left: 230px;
+                margin-top: 28px;
+                font-size: 18px;
+                color: #df4f45;
+                outline: none;
+                cursor: pointer;
+            }
+            input:hover{
+                background-color: #e4857f;
+                color: #fff;
+            }           
+        }
+    }
+    /*精品推荐*/
+    .recommond{
+        width: 100%;
+        height: 967px;
+        background: url(../img/index_img/recommend.png) no-repeat 0 0 #e2e5e9;
+        overflow: hidden;
+        .recommond_wrap{
+            width: 1152px;
+            height: 538px;
+            background-color: #fff;
+            margin: 314px auto;
+            margin-bottom: 0;
+            position: relative;
+            .side_img{
+                float: left;
+                width: 456px;
+                height: 538px;
+            }
+            .cake_list{
+                width: 695px;
+                height: 538px;
+                padding-left: 28px;
+                padding-top: 84px;
+                float: left;
+                @mixin cake_dl{
+                    float: left;
+                    margin-left: 10px;
+                    width: 200px;
+                    height: 352px;
+                    dt{
+                        height: 200px;
+                    }
+                    dd{
+                        height: 152px;
+                        padding-left: 14px;
+                        padding-top: 14px;
+                        h3{                          
+                            font-size: 22px;
+                            color: #dc4f45;
+                            font-weight: normal;
+                            margin-bottom: 14px;
+                        }
+                        a{
+                            height: 20px;
+                            display: inline-block;
+                            overflow: hidden;
+                            font-size: 14px;
+                            color: #666;
+                        }
+                        span{
+                            font-size: 14px;
+                            color: #999;
+                        }
+                        p{
+                            width: 45px;
+                            height: 26px;
+                            background: url(../img/index_img/but.png) no-repeat 0 0;
+                            margin-top: 24px;
+                            text-align: center;
+                            line-height: 28px;
+                            font-size: 12px;
+                            a{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                dl{
+                   @include cake_dl; 
+                }
+            }
+            .leftArrow{
+                width: 44px;
+                height: 52px;
+                background: url(../img/index_img/main.png) no-repeat -8px -306px;
+                position: absolute;
+                left: -24px;
+                top: 228px;              
+            }
+            .rightArrow{
+                width: 44px;
+                height: 52px;
+                background: url(../img/index_img/main.png) no-repeat -148px -309px;
+                position: absolute;
+                right: -20px;
+                top: 228px;              
+            }
+        }
+        .recommond_more{
+            width: 170px;
+            height: 40px;
+            background-color: #e4857f;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 40px;
+            margin: 30px auto;
+            a{
+                color: #fff;
+            }
+        }
+    }
+    /*小广告栏*/
+    .smallBanner{
+        width: 100%;
+        height: 98px;
+        position: relative;
+        overflow: hidden;
+        a{
+            height: 98px;
+            position: absolute;
+            left: 50%;
+            margin-left: -960px;
+            overflow: hidden;
+        }
+    }
+    /*特色*/
+   .characteristic{
+       width: 100%;
+       height: 972px;
+       overflow: hidden;
+       .characteristic_wrap{
+           width: 1152px;
+           height: 916px;
+           margin: 0 auto;
+           margin-top: 56px;
+           a{
+               margin-right: -5px;
+           }
+           .allCakes{
+               width: 170px;
+                height: 40px;
+                background-color: #e4857f;
+                border-radius: 20px;
+                text-align: center;
+                line-height: 40px;
+                margin: 30px auto;
+                a{
+                    color: #fff;
+                }
+           }
+       }
+   }
 }
 

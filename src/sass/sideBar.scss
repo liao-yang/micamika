@@ -1,0 +1,101 @@
+/*侧边栏*/
+
+.sideBar{
+    width: 35px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    background-color: black;
+    z-index: 2;
+    .myOrder{
+        width: 35px;
+        height: 30px;
+        background: url(../img/index_img/ico.png) no-repeat 0 -6px;
+        margin-top: 108px;
+    }
+    .myOrder:hover{
+        background: url(../img/index_img/ico.png) no-repeat 0 -6px #666;
+    }
+    ._24hours{
+        width: 35px;
+        height: 30px;
+        background: url(../img/index_img/ico.png) no-repeat 0 -51px;
+        margin-top: 12px;
+    }
+    ._24hours:hover{
+        background: url(../img/index_img/ico.png) no-repeat 0 -51px #666;
+    }
+    .miniCart{
+        width: 35px;
+        height: 110px;
+        margin-top: 10px;
+        i{
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          background: url(../img/index_img/ico.png) no-repeat 0 -137px;  
+        }
+        p{
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+        }
+        span{
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            margin-left: 9px;
+            text-align: center;
+            font-size: 12px;
+            color: #fff;
+            background-color: #dc4f45;
+            border-radius: 50%;
+        }
+    }
+    .miniCart:hover{
+        background-color: #666;
+    }
+    .sideBar_bottom{
+        width: 35px;
+        height: 180px;
+        position: absolute;
+        bottom: 50px;
+        background-color: #000;
+        .sale{
+            width: 35px;
+            height: 30px;
+            background: url(../img/index_img/ico.png) no-repeat 0 -186px;
+            margin-top: 12px; 
+        }
+        .sale:hover{
+            background: url(../img/index_img/ico.png) no-repeat 0 -186px #666;
+        }
+        .code{
+            width: 35px;
+            height: 30px;
+            background: url(../img/index_img/ico.png) no-repeat 0 -275px;
+            margin-top: 12px; 
+        }
+        .code:hover{
+            background: url(../img/index_img/ico.png) no-repeat 0 -275px #666;
+        }
+        .phone{
+            width: 35px;
+            height: 30px;
+            background: url(../img/index_img/ico.png) no-repeat 0 -318px;
+            margin-top: 12px; 
+        }
+        .phone:hover{
+            background: url(../img/index_img/ico.png) no-repeat 0 -318px #666;
+        }
+        .backTop{
+            width: 35px;
+            height: 30px;
+            background: url(../img/index_img/ico.png) no-repeat 0 -365px;
+            margin-top: 12px; 
+        }
+        .backTop:hover{
+            background: url(../img/index_img/ico.png) no-repeat 0 -365px #666;
+        }
+    }
+}
