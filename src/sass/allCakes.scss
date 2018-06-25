@@ -17,3 +17,76 @@ html,body{
 }
 
 /*全部蛋糕更改背景图*/
+
+
+
+/*主要内容*/
+.content{
+    width: 100%;
+    min-height: 2937px;
+    .content_wrap{
+        width: 1152px;
+        min-height: 2937px;
+        margin: 0 auto;
+        .empty{
+            height: 48px;
+            border-bottom: 1px solid #e2e5e9;
+        }
+        .kind{
+            width: 935px;
+            height: 124px;
+            background-color: #e2e5e9;
+            margin-top: 25px;            
+            ul{
+                height: 82px;
+                border-bottom: 1px solid #ccc;
+                padding-top: 14px;
+                p{
+                    font-size: 12px;
+                    color: #666;
+                    margin-left: 18px;
+                    margin-bottom: 26px;
+                }
+                li{
+                    float: left;
+                    font-size: 12px;
+                    padding: 0 10px;
+                    a{
+                        color: #666;
+                    }
+                    a:hover{
+                        color: #dc4f45;
+                    }
+                }
+            }
+            .kind_bottom{
+                height: 42px;
+                padding-left: 18px;
+                a{
+                    font-size: 12px;
+                    color: #666;
+                    line-height: 42px;
+                    margin-right: 25px;
+                }
+                span{
+                    font-size: 12px;
+                    color: #666;
+                }
+                select{
+                    width: 115px;
+                    height: 22px;
+                }
+                .pages{
+                    float: right;
+                    line-height: 42px;
+
+                    a{
+                        i{
+                           font-size: 12px !important; 
+                        }                       
+                    }
+                }
+            }
+        }
+    }
+}
