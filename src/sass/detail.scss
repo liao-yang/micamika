@@ -1,0 +1,328 @@
+/*清除默认样式*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, div, section, figure { 
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box;
+}
+fieldset, img { border:none; vertical-align: middle;}
+em, i, b, strong{ 
+    font-style:normal; 
+    font-weight:normal; 
+}
+ul, ol { list-style:none; } 
+a {text-decoration:none; }
+
+html,body{
+    height: 100%;
+}
+
+.content{
+    width: 100%;
+    .contentWrap{
+        width: 1152px;
+        margin: 0 auto;
+        overflow: hidden;
+        margin-bottom: 10px;
+        /*蛋糕购买部分*/
+        .cakeDetails{
+            height: 735px;
+            margin-top: 47px;
+            border-top: 1px solid #e2e5e9;
+            border-bottom: 1px solid #e2e5e9;
+            padding-top: 27px;
+            .cakeImg{
+                width: 500px;
+                height: 709px;
+                float: left;
+                dd{
+                    height: 117px;
+                    @mixin _clik {
+                        width: 17px;
+                        height: 117px;
+                        float: left;
+                        background-color: #eee;
+                        line-height: 117px;
+                        text-align: center;
+                        cursor: pointer;
+                        border-radius: 9px; 
+                    }
+                    .leftClick{
+                        @include _clik
+                    }
+                    .smallImg{
+                        width: 460px;
+                        height: 117px;
+                        float: left;
+                        overflow: hidden;
+                        padding-top: 10px;
+                        ul{
+                            width: 1000px;
+                                li{
+                                float: left;
+                                img{
+                                    height: 100px;
+                                    margin-left: 13px;
+                                }
+                            }
+                        }
+                        
+                    }
+                    .rightClick{                        
+                        @include _clik
+                        float: right;
+                    }
+                }
+                input{
+                    width: 79px;
+                    height: 29px;
+                    background-color: #eaeaea;
+                    border: 1px solid #ccc;
+                    border-radius: 2px;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                }
+                input:first-of-type{
+                    margin-left: 168px;                   
+                }
+            }
+            .addCart{
+                width: 651px;
+                height: 500px;
+                float: left;
+                padding-left: 100px;
+                h2{
+                    font: 32px/40px "microsoft yahei";           
+                }
+                i{
+                    font: 12px/12px "microsoft yahei" ;
+                    color: #dc4f45;
+                }
+                h3{
+                    font: 30px/40px "microsoft yahei";
+                    color: #dc4f45;
+                }
+                @mixin _add{
+                    width: 277px;
+                    height: 25px;
+                    p{
+                        width: 75px;
+                        height: 25px;
+                        background-color: #e2e5e9;
+                        font-size: 12px;
+                        text-align: center;
+                        line-height: 25px;
+                        float: left;      
+                    }
+                    span{
+                        font-size: 12px;
+                        margin-left: 5px;
+                    }
+                }
+                .num{
+                    @include _add;
+                    float: left;
+                }
+                .brand{        
+                    @include _add;
+                    float: left;
+                    width: 260px;
+                }
+                .standard{
+                    width: 560px;
+                    height: 60px;
+                    float: left;
+                    margin-top: 10px;
+                    p{
+                        width: 50px;
+                        float: left;
+                        background-color: #e2e5e9;
+                        font-size: 12px;
+                        text-align: center;
+                        line-height: 25px;
+                    }
+                    div{
+                        width: 460px;
+                        height: 23px;
+                        float: left;
+                        input{
+                            width: 218px;
+                            height: 23px;
+                            float: left;
+                            margin-left: 10px;
+                            margin-bottom: 5px;
+                            background-color: #e2e5e9;
+                            border: none;
+                        }
+                    }             
+                }
+                .howMany{
+                    width: 560px;
+                    height: 60px;
+                    margin-top: 10px;
+                    float: left;
+                    p{
+                        width: 50px;
+                        float: left;
+                        background-color: #e2e5e9;
+                        font-size: 12px;
+                        text-align: center;
+                        line-height: 25px;
+                    }
+                    .cakeNumber{
+                        width: 74px;
+                        height: 22px;
+                        float: left;
+                        margin-left: 10px;
+                        a{
+                            width: 20px;
+                            height: 21px;
+                            border: 1px solid #a9a9a9;
+                            text-align: center;
+                            line-height: 21px;
+                            float: left;   
+                            color: #000;                   
+                        }
+                        a:hover{
+                            background-color: #999;
+                        }
+                        input{
+                            width: 30px;
+                            height: 19px;
+                            float: left;
+                            line-height: 21px;
+                            text-align: center;
+                            border: 1px solid #666;
+                            border-left: none;
+                            border-right: none;
+                            background-color: white;
+                        }
+                   }
+                }
+                @mixin _input{
+                        display: inline-block;
+                        width: 162px;
+                        height: 40px;
+                        background-color: aqua;
+                        border-radius: 20px;
+                        outline: none;
+                        border: none;
+                        font-size: 14px;
+                        text-align: center;
+                        line-height: 40px;
+                    }
+                .immediately{
+                   @include _input;
+                   background-color: #fbe7e5;
+                   border: 1px solid #dc4f45;
+                   color: #dc4f45;
+                }
+                .addToCart{
+                   @include _input;
+                   background-color: #dc4f45;
+                   border: 1px solid #dc4f45;
+                   color: #fff;
+                   margin-left: 20px;
+                }
+                b{
+                    display: inline-block;
+                    width: 90px;
+                    height: 20px;
+                    font-size: 12px;
+                    margin-left: 10px;
+                }
+                 
+            }       
+        }
+        /*菜单*/
+        .cackMenu{
+            width: 936px;
+            height: 40px;
+            margin-top: 20px;
+            border: 1px solid #666;
+            border-top: 2px solid #999;
+            position: relative;
+            li{
+                float: left;
+                padding: 0 58px;
+                line-height: 37px;
+                font-size: 12px;
+                a{
+                    color: #333;
+                }
+                
+            }
+            /*热卖商品*/
+              ._3hours{
+                   width: 182px;
+                   height: 767px;
+                   border: 1px solid #e2e5e9;
+                   margin-top: -124px;    
+                   margin-left: 28px;  
+                   position: absolute;
+                   right: -219px;
+                   top: 121px;    
+                   h3{
+                       height: 37px;
+                       font-size: 12px;
+                       background-color: #e2e5e9;
+                       color: #666666;
+                       line-height: 37px;
+                       text-align: center;
+                       a{
+                           color: #666;
+                           margin-left: 34px;
+                       }
+                       a:hover{
+                           color: #de4f45;
+                       }
+                   }
+                   dl{
+                       width: 180px;
+                       height: 238px;
+                       dt{
+                           padding-top: 16px;
+                           padding-left: 16px;
+                           img{
+                               width: 150px;
+                           }
+                       }
+                       dd{
+                           text-align: center;
+                           a{
+                               font-size: 12px;
+                               color: #666;
+                           }
+                           a:hover{
+                               color: #de4f45;
+                           }
+                           span{
+                               font-size: 12px;
+                               color: #de4f45;
+                           }
+                       }
+                   }
+                   
+               }
+        }
+        
+        
+        /*详情页面*/
+       .aboutCake{
+           width: 936px;
+           height: 126px;
+           margin-top: 20px;
+           border: 1px solid #CCC;
+           display: flex;
+           justify-content: space-around;
+           div{
+               width: 250px;
+               height: 126px;
+               float: left;
+               font-size: 12px;
+               color: #666;
+               line-height: 30px;           
+           }
+       }
+       
+    }
+}

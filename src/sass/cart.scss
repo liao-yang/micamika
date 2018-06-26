@@ -1,0 +1,215 @@
+/*清除默认样式*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, div, section, figure { 
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box;
+}
+fieldset, img { border:none; }
+em, i, b, strong{ 
+    font-style:normal; 
+    font-weight:normal; 
+}
+ul, ol { list-style:none; } 
+a {text-decoration:none; }
+
+html,body{
+    height: 100%;
+}
+
+.content{
+    width: 100%;
+    .wrap{
+        width: 1152px;
+        margin: 0 auto;
+        .cartLogo{
+            width: 120px;
+            height: 70px;
+            font-size: 24px;
+            color: #666;
+            text-align: center;
+            line-height: 70px;
+        }
+        .process{
+            width: 360px;
+            height: 34px;
+            float: right;
+            p{
+                height: 30px;
+                float: left;
+                background-color: #ddd;
+                border-radius: 17px;
+                font-size: 12px;
+                text-align: center;
+                line-height: 30px;
+            }
+            p:nth-of-type(1){
+                width: 100px;
+            }
+            p:nth-of-type(2){
+                width: 150px;
+            }
+            p:nth-of-type(3){
+                width: 108px;
+            }
+        }
+        .buy{
+            height: 332px;
+            margin-top: 53px;
+            border: 1px solid #e6e6e6;
+            margin-bottom: 20px;
+            .cartTitle{
+                height: 40px;
+                background-color: #d8d8d8;
+                font-size: 12px;
+                color: #666;
+                li{
+                    float: left;
+                    width: 100px;
+                    text-align: center;
+                    line-height: 40px;
+                }
+                li:first-child{
+                    width: 550px;
+                }
+            }
+            .addCake{
+                height: 106px;
+                padding-top: 15px;
+                padding-left: 10px;
+                border-bottom: 1px solid #e6e6e6;
+                dl{
+                    width: 540px;
+                    height: 82px;
+                    float: left;
+                    dt{
+                        width: 82px;
+                        height: 82px;
+                        border: 1px solid #ccc;
+                        float: left;
+                    }
+                    dd{
+                        float: left;
+                        font-size: 12px;
+                        margin-left: 10px;
+                        a{
+                            color: #666;
+                        }
+                        p{
+                            color: #666;
+                        }
+                    }
+                }
+                ul{
+                    width: 600px;
+                    height: 82px;
+                    float: left;
+                    li{
+                        width: 100px;
+                        text-align: center;
+                        float: left;
+                        font-size: 12px;
+                        a{
+                          color: #dc4f45;  
+                        }
+                    }
+                    .cakeNumber{
+                        width: 74px;
+                        margin-left: 16px;
+                        a{
+                            width: 20px;
+                            height: 21px;
+                            border: 1px solid #a9a9a9;
+                            text-align: center;
+                            line-height: 21px;
+                            float: left;   
+                            color: #000;                   
+                        }
+                        a:hover{
+                            background-color: #999;
+                        }
+                        input{
+                            width: 30px;
+                            height: 19px;
+                            float: left;
+                            line-height: 21px;
+                            text-align: center;
+                            border: 1px solid #666;
+                            border-left: none;
+                            border-right: none;
+                        }
+                   }
+                }
+            }
+            .totalPrice{
+                height: 125px;
+                padding-left: 820px;
+                padding-top: 20px;
+                h2{
+                    font-size: 12px;
+                    color: #666;
+                    font-weight: normal;
+                    span{
+                        font-size: 18px;
+                        color: #fe2000;
+                    }
+                }
+                p{
+                    font-size: 12px;
+                    color: #666;
+                    span{
+                        font-size: 28px;
+                        color: #fe2000;
+                    }
+                }
+            }
+            .account{
+                height: 58px;
+                background-color: #d8d8d8;
+                
+                padding-left: 15px;
+                input[value="清空购物车"]{
+                    width: 82px;
+                    height: 25px;
+                    background-color: #fff;
+                    text-align: center;
+                    line-height: 25px;
+                    color: #666;
+                    outline: none;
+                    border: 1px solid #666;
+                    margin-top: 18px;
+                }
+                input[value="凑单商品"]{
+                    width: 82px;
+                    height: 25px;
+                    background-color: #dc4f45;
+                    text-align: center;
+                    line-height: 25px;
+                    color: #fff;
+                    outline: none;
+                    border: none;
+                    margin-left: 10px;
+                    margin-top: 18px;
+                }
+                a{
+                    color: #666;
+                    font-size: 12px;
+                    text-decoration: underline;
+                    margin-left: 740px;
+                }
+                input[value="下单结算"]{
+                    float: right;
+                    width: 142px;
+                    height: 40px;
+                    background-color: #dc4f45;
+                    text-align: center;
+                    line-height: 40px;
+                    color: #fff;
+                    outline: none;
+                    border: none;
+                    margin-right: 16px;
+                    margin-top: 11px;
+                }
+            }
+        }
+    }
+}

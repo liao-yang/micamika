@@ -28,15 +28,18 @@ html,body{
         width: 1152px;
         min-height: 2937px;
         margin: 0 auto;
+        /*空div，放边框*/
         .empty{
             height: 48px;
             border-bottom: 1px solid #e2e5e9;
         }
+        /*蛋糕种类选择*/
         .kind{
             width: 935px;
             height: 124px;
             background-color: #e2e5e9;
-            margin-top: 25px;            
+            margin-top: 25px;
+            float: left;            
             ul{
                 height: 82px;
                 border-bottom: 1px solid #ccc;
@@ -60,33 +63,203 @@ html,body{
                 }
             }
             .kind_bottom{
+                width: 935px;
                 height: 42px;
-                padding-left: 18px;
-                a{
-                    font-size: 12px;
-                    color: #666;
-                    line-height: 42px;
-                    margin-right: 25px;
-                }
-                span{
-                    font-size: 12px;
-                    color: #666;
-                }
-                select{
-                    width: 115px;
-                    height: 22px;
-                }
-                .pages{
-                    float: right;
-                    line-height: 42px;
-
+                padding-left: 18px;               
+                .left{
+                    width: 500px;
+                    float: left;
                     a{
-                        i{
-                           font-size: 12px !important; 
-                        }                       
+                        font-size: 12px;
+                        color: #666;
+                        line-height: 42px;
+                        margin-right: 25px;
                     }
+                    span{
+                        font-size: 12px;
+                        color: #666;
+                    }
+                    select{
+                        width: 115px;
+                        height: 22px;
+                    }
+                }
+                .right{
+                    float: right;
+                    .pages{
+                        line-height: 42px;
+                        float: left;
+                        margin-right: 30px;
+                        span{
+                            font-size: 12px;
+                        }
+                        i{
+                            font-size: 16px;
+                        }
+                    }
+                    .bigImg{
+                        float: right;
+                        line-height: 42px;
+                        margin-right: 10px;
+                        a{
+                            font-size: 12px;
+                            color: #666;
+                        }
+                    }
+                }                             
+            }
+        }
+        //蛋糕模板
+        #cakes{
+            width: 934px;
+            min-height: 2740px;
+            float: left;
+            position: relative;
+            /*蛋糕模板*/
+           .cakeTemplate{
+               width: 242px;
+               height: 380px;
+               padding-top: 20px;
+               padding-left: 21px;
+               float: left;
+               margin: 0 34px;
+               margin-top: 5px;
+               dd{
+                   .title{
+                       font-size: 14px;
+                       color: #666;
+                       font-weight: normal;
+                       margin-top: 12px;                  
+                   }
+                   .title:hover{
+                       color: #de4f45;
+                   }
+                   p{
+                       font-size: 16px;
+                       color: #de4f45;
+                       margin-top: 36px;
+                   }
+                   /*数量*/
+                   .cakeNumber{
+                        width: 74px;
+                        margin-top: 30px;
+                        a{
+                            width: 20px;
+                            height: 21px;
+                            border: 1px solid #a9a9a9;
+                            text-align: center;
+                            line-height: 21px;
+                            float: left;   
+                            color: #000;                   
+                        }
+                        a:hover{
+                            background-color: #999;
+                        }
+                        input{
+                            width: 30px;
+                            height: 19px;
+                            float: left;
+                            line-height: 21px;
+                            text-align: center;
+                            border: 1px solid #666;
+                            border-left: none;
+                            border-right: none;
+                        }
+                   }
+                   .addToCart{
+                       display: inline-block;
+                       width: 90px;
+                       height: 18px;
+                       border: none;
+                       background-color: #e2e5e9;
+                       margin-left: 8px;
+                       text-align: center;
+                       font-size: 12px;
+                       color: #666;
+                   }
+                   .addToCart:hover{
+                       background-color: #ebd8c7;
+                   }
+               }
+           }
+           .cakeTemplate:hover{
+               border: 1px solid #666;
+               padding-left: 20px;
+               padding-top: 19px;
+           }
+           /*翻页*/
+          .list{
+                position: absolute;
+                right: 40px;
+                bottom: 10px;
+                li{
+                    width: 24px;
+                    height: 24px;
+                    float: left;
+                    margin-left: 4px;
+                    text-align: center;
+                    line-height: 20px;
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                    a{
+                        color: #666;
+                    }
+                }
+                li:hover{
+                    background: #dc4f45;
                 }
             }
         }
+        /*京津3小时*/
+       ._3hours{
+           width: 182px;
+           height: 767px;
+           float: left;
+           border: 1px solid #e2e5e9;
+           margin-top: -124px;    
+           margin-left: 28px;      
+           h3{
+               height: 37px;
+               font-size: 12px;
+               background-color: #e2e5e9;
+               color: #666666;
+               line-height: 37px;
+               padding-left: 12px;
+               a{
+                   color: #666;
+                   margin-left: 34px;
+               }
+               a:hover{
+                   color: #de4f45;
+               }
+           }
+           dl{
+               width: 180px;
+               height: 238px;
+               dt{
+                   padding-top: 16px;
+                   padding-left: 16px;
+                   img{
+                       width: 150px;
+                   }
+               }
+               dd{
+                   text-align: center;
+                   a{
+                       font-size: 12px;
+                       color: #666;
+                   }
+                   a:hover{
+                       color: #de4f45;
+                   }
+                   span{
+                       font-size: 12px;
+                       color: #de4f45;
+                   }
+               }
+           }
+           
+       }
+        
     }
 }

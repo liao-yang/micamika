@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>micamika</title>
-		<link rel="stylesheet" type="text/css" href="../css/header.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/sideBar.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/allCakes.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/sideBar.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/allCakes.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/iconfont.css"/>
 	</head>
 	<body>
 		<!--右边侧边栏-->
@@ -18,6 +18,7 @@
 		<div class="content">
 			<div class="content_wrap">
 				<div class="empty"></div>
+				<!--种类选择-->
 				<div class="kind">
 					<ul>
 						<p>分类</p>
@@ -36,32 +37,109 @@
 						<li><a href="#">VIP购卡</a></li>
 					</ul>
 					<div class="kind_bottom">
-						<a href="#">默认</a>
-						<a href="#">价格<i class="iconfont icon-f11-copy"></i></a>
-						<a href="#">销量<i class="iconfont icon-f11-copy"></i></a>
-						<span>排序:</span>
-						<select name="">
-							<option value="">默认</option>
-							<option value="">按价格 从高到低</option>
-							<option value="">按价格 从低到高</option>
-							<option value="">访问周次数</option>
-							<option value="">总访问次数</option>
-							<option value="">周购买次数</option>
-							<option value="">总购买次数</option>
-						</select>
-						<div class="pages">
-							<span>1/4</span>
-							<i class="iconfont icon-zuofanye-xue"></i>
-							<i class="iconfont icon-youfanye-xue"></i>
-							<a href="#"><i class="iconfont icon-biaoge">大图</i></a>
-							<a href="#"><i class="iconfont icon-datu">列表</i></a>				
+						<div class="left">
+							<a href="#">默认</a>
+							<a href="#">价格<i class="iconfont icon-f11-copy"></i></a>
+							<a href="#">销量<i class="iconfont icon-f11-copy"></i></a>
+							<span>排序:</span>
+							<select name="">
+								<option value="">默认</option>
+								<option value="">按价格 从高到低</option>
+								<option value="">按价格 从低到高</option>
+								<option value="">访问周次数</option>
+								<option value="">总访问次数</option>
+								<option value="">周购买次数</option>
+								<option value="">总购买次数</option>
+							</select>
+						</div>
+						<div class="right">
+							<div class="pages">
+								<span>1/4</span>
+								<i class="iconfont icon-zuofanye-xue"></i>
+								<i class="iconfont icon-youfanye-xue"></i>										
+							</div>
+							<div class="bigImg">
+								<i class="iconfont icon-biaoge"></i>
+								<a href="#">大图</a>
+								<i class="iconfont icon-datu"></i>
+								<a href="#">列表</a>
+							</div>
 						</div>
 					</div>
 				</div>
+				
+				
+				<!--蛋糕模板-->
+				<div id="cakes">
+					<script type="text/html" id="cakeTemp">
+						{{each list currObj}}
+						<dl class="cakeTemplate">
+							<dt>
+								<a href="/html/detail.html"><img src="{{currObj.img}}"/></a>
+							</dt>
+							<dd>
+								<a href="#" class="title">{{currObj.title}}</a>
+								<p>￥{{currObj.price}}</p>
+								<div class="cakeNumber">
+		              				<a href="javascript:void(0)" class="induce">-</a>
+		              				<input type="text" min="1" max="20" value="1">
+		              				<a href="javascript:void(0)" class="increase">+</a>
+								</div>
+								<a href="/html/cart.html" class="addToCart">加入购物车</a>
+							</dd>
+						</dl>
+						{{/each}}
+					</script>
+					<ul class="list">
+						<li><a href="#">&lt;</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">&gt;</a></li>
+					</ul>
+				</div>
+				
+				<!--侧面京津3小时速达-->
+				<div class="_3hours">
+					<h3>京津3小时速达<a href="#">更多&gt;</a></h3>
+					<dl>
+						<dt>
+							<a href="#"><img src="/img/allCakes_img/a5aa103cdf90ffc610015a3db91d0373.jpg"/></a>
+						</dt>
+						<dd>
+							<a href="#">百利甜之恋 Bailey Love</a>
+							<span>￥237.00</span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="#"><img src="/img/allCakes_img/a5aa103cdf90ffc610015a3db91d0373.jpg"/></a>
+						</dt>
+						<dd>
+							<a href="#">百利甜之恋 Bailey Love</a>
+							<span>￥237.00</span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="#"><img src="/img/allCakes_img/a5aa103cdf90ffc610015a3db91d0373.jpg"/></a>
+						</dt>
+						<dd>
+							<a href="#">百利甜之恋 Bailey Love</a>
+							<span>￥237.00</span>
+						</dd>
+					</dl>
+				</div>
+				
+				
 			</div>
 		</div>
+		
+		
+		
 		<!--网页尾部-->
 		<div class="footer"></div>
-		<script src="../lib/requirejs/require.js" data-main="../js/allCakes.js"></script>
+		<script src="/lib/requirejs/require.js" data-main="/js/allCakes.js"></script>
 	</body>
 </html>

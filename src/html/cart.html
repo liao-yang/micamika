@@ -3,7 +3,77 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/sideBar.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/cart.css"/>
 	</head>
 	<body>
+		<!--右边侧边栏-->
+		<div class="sideBar"></div>
+		<!--网页头部-->
+		<div class="header"></div>
+		<!--网页内容-->
+		<div class="content">
+			<div class="wrap">
+				<div class="cartLogo">购物车</div>
+				<div class="process">
+					<p>购物车</p>
+					<p>填写和提交订单信息</p>
+					<p>成功提交订单</p>
+				</div>
+				<div class="buy">
+					<ul class="cartTitle">
+						<li>商品</li>
+						<li>销售价</li>
+						<li>数量</li>
+						<li>优惠全额</li>
+						<li>积分</li>
+						<li>小计</li>
+						<li>操作</li>
+					</ul>
+					<div class="addCake">
+						<dl>
+							<dt>
+								<img src=""/>
+							</dt>
+							<dd>
+								<a href="#">蛋糕名字</a>
+								<p>规格：小只</p>
+							</dd>
+						</dl>
+						<ul>
+							<li>￥237.00</li>
+							<li>
+								<div class="cakeNumber">
+		              				<a href="javascript:void(0)" class="induce">-</a>
+		              				<input type="text" min="1" max="20" value="1">
+		              				<a href="javascript:void(0)" class="increase">+</a>
+								</div>
+							</li>
+							<li>0.00</li>
+							<li>237</li>
+							<li>￥237.00</li>
+							<li><a href="#">收藏</a>|<a href="#">删除</a></li>
+						</ul>
+					</div>
+					<div class="totalPrice">
+						<h2>商品总金额：<span>￥287.00</span></h2>
+						<h2>订单优惠金额：<span>￥0.00</span></h2>
+						<p>(订单可得积分287) 总金额：<span>￥287.00</span></p>
+					</div>
+					<div class="account">
+						<input type="button" name="" id="" value="清空购物车" />
+						<input type="button" name="" id="" value="凑单商品" />
+						<a href="#">继续购物</a>
+						<input type="button" name="" id="" value="下单结算" />
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!--网页尾部-->
+		<div class="footer"></div>
+		<script src="/lib/requirejs/require.js" data-main="/js/cart"></script>
 	</body>
 </html>
