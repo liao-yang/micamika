@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<!-- Bootstrap -->
+    	<link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/css/header.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/footer.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/sideBar.css"/>
@@ -17,11 +21,6 @@
 		<div class="content">
 			<div class="wrap">
 				<div class="cartLogo">购物车</div>
-				<div class="process">
-					<p>购物车</p>
-					<p>填写和提交订单信息</p>
-					<p>成功提交订单</p>
-				</div>
 				<div class="buy">
 					<ul class="cartTitle">
 						<li>商品</li>
@@ -32,40 +31,49 @@
 						<li>小计</li>
 						<li>操作</li>
 					</ul>
-					<div class="addCake">
-						<dl>
-							<dt>
-								<img src=""/>
-							</dt>
-							<dd>
-								<a href="#">蛋糕名字</a>
-								<p>规格：小只</p>
-							</dd>
-						</dl>
-						<ul>
-							<li>￥237.00</li>
-							<li>
-								<div class="cakeNumber">
-		              				<a href="javascript:void(0)" class="induce">-</a>
-		              				<input type="text" min="1" max="20" value="1">
-		              				<a href="javascript:void(0)" class="increase">+</a>
+					
+					<!--购物车里商品模板-->
+					<div class="cartContent">
+						<script type="text/html" id="cartCakes">
+							{{each cartCakes current}}
+								<div class="addCake">
+									<dl>
+										<dt>
+											<img src="{{current.img}}" style="width: 82px;height: 82px;"/>
+										</dt>
+										<dd>
+											<a href="#">{{current.title}}</a>
+											<p>规格：小只</p>
+											<span class="id">商品编号：{{current.id}}</span>
+										</dd>
+									</dl>
+									<ul>
+										<li class="siglePrice">{{current.price}}</li>
+										<li>
+											<div class="cakeNumber">
+					              				<a href="javascript:void(0)" class="induce">-</a>
+					              				<input type="text" value="{{current.amount}}" class="changeNum">
+					              				<a href="javascript:void(0)" class="increase">+</a>
+											</div>
+										</li>
+										<li>￥0.00</li>
+										<li class="integral">{{current.price*current.amount}}</li>
+										<li class="total">￥{{current.price*current.amount}}</li>
+										<li><span>删除</span></li>
+									</ul>
 								</div>
-							</li>
-							<li>0.00</li>
-							<li>237</li>
-							<li>￥237.00</li>
-							<li><a href="#">收藏</a>|<a href="#">删除</a></li>
-						</ul>
+							{{/each}}
+						</script>
 					</div>
+					
+					
 					<div class="totalPrice">
-						<h2>商品总金额：<span>￥287.00</span></h2>
-						<h2>订单优惠金额：<span>￥0.00</span></h2>
-						<p>(订单可得积分287) 总金额：<span>￥287.00</span></p>
+						<p>总金额：<span class="_totalPrice">￥287.00</span></p>
 					</div>
 					<div class="account">
-						<input type="button" name="" id="" value="清空购物车" />
+						<input type="button" name="" id="clearCart" value="清空购物车" />
 						<input type="button" name="" id="" value="凑单商品" />
-						<a href="#">继续购物</a>
+						<a href="/html/allCakes.html">继续购物</a>
 						<input type="button" name="" id="" value="下单结算" />
 					</div>
 				</div>
@@ -75,5 +83,9 @@
 		<!--网页尾部-->
 		<div class="footer"></div>
 		<script src="/lib/requirejs/require.js" data-main="/js/cart"></script>
+		<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    	<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+		<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    	<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>

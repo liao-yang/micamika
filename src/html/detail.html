@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>micamika</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<!-- Bootstrap -->
+    	<link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/css/header.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/footer.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/sideBar.css"/>
@@ -19,25 +23,41 @@
 				<!--购买界面-->
 				<div class="cakeDetails">
 					 <div class="cakeImg">
-					 	<dl>
-					 		<dt><img src="/img/details_img/a2aa5905958ccb9337bc2a2a879eb901.jpg"/></dt>
-					 		<dd>
+					 	<div class="grid images_3_of_2">
+					 		<img src="/img/details_img/a2aa5905958ccb9337bc2a2a879eb901.jpg" class="img-responsive zoom" data-zoom-image="/img/details_img/178399279129a8b748c023b47ad48ab7.jpg"/>
+					 		<div  class="smallImg">
 					 			<div class="leftClick">&lt;</div>
-					 			<div class="smallImg">
-					 				<ul>
-						 				<li><img src="/img/details_img/a75ce765535a37045c190256bbb6d2b2.jpg"/></li>
-						 				<li><img src="/img/details_img/ff22def1f569b0710b45ed4d3d3b3ed4.jpg"/></li>
-						 				<li><img src="/img/details_img/42ee9bb480357439ddf2c3a7672316fe.jpg"/></li>
-						 				<li><img src="/img/details_img/34548c24b08f3810403192cd82d485db.jpg"/></li>
-						 				<li><img src="/img/details_img/907abc65083e3cc7480b50380da7141e.jpg"/></li>
-						 				<li><img src="/img/details_img/e8e02a66feb3310e97f56db8c4f0b3bc.jpg"/></li>
-						 				<li><img src="/img/details_img/d4372f5d2bcb8a68ec8b010d47783e97.jpg"/></li>
-						 				<li><img src="/img/details_img/b092cc3804c6fca147cae8f9e9516af3.jpg"/></li>
-						 			</ul>
-					 			</div>				 			
+						 			<div class="_wrap" >
+						 				<div class="imgs" id="gallery_01">
+						 					<a href="#" class="elevatezoom-gallery" data-image="/img/details_img/70af3939edb544939d7d19a512ff5964.jpg" data-zoom-image="/img/details_img/73a155d9337df42bb5938da56fa61711.jpg">
+												<img src="/img/details_img/a75ce765535a37045c190256bbb6d2b2.jpg" width="100">
+								 			</a>
+								 			<a href="#" class="elevatezoom-gallery" data-image="/img/details_img/a2aa5905958ccb9337bc2a2a879eb901.jpg" data-zoom-image="/img/details_img/178399279129a8b748c023b47ad48ab7.jpg">
+												<img src="/img/details_img/ff22def1f569b0710b45ed4d3d3b3ed4.jpg" width="100">
+								 			</a>
+								 			<a href="#" class="elevatezoom-gallery" data-image="/img/details_img/f4a9424d7874d39928f04978c2a02f71.jpg" data-zoom-image="/img/details_img/2cb6c95da5d14b1b5854c5818824b100.jpg">
+												<img src="/img/details_img/42ee9bb480357439ddf2c3a7672316fe.jpg" width="100">
+								 			</a>
+								 			<a href="#" class="elevatezoom-gallery" data-image="/img/details_img/0ec4a02b174b7213879728c3aff2b1db.jpg" data-zoom-image="/img/details_img/83840d166710c550efb5631409648860.jpg">
+												<img src="/img/details_img/34548c24b08f3810403192cd82d485db.jpg" width="100">
+								 			</a>
+								 			<a href="#" class="elevatezoom-gallery" data-image="/img/details_img/68affa47e3d0b144a0517dfa5ad41dc3.jpg" data-zoom-image="/img/details_img/3a6ba185595e9c332d81a066df2657ca.jpg">
+												<img src="/img/details_img/907abc65083e3cc7480b50380da7141e.jpg" width="100">
+								 			</a>
+								 			<a href="#" class="elevatezoom-gallery" data-image="/img/details_img/f287c215efd9b5b66793fd1c54efaca2.jpg" data-zoom-image="/img/details_img/23d12f4836de543ac6bc96ef581b415e.jpg">
+												<img src="/img/details_img/e8e02a66feb3310e97f56db8c4f0b3bc.jpg" width="100">
+								 			</a>
+								 			<a href="#" class="elevatezoom-gallery" data-image="/img/details_img/944e624861a71b21fd9930d9723568e9.jpg" data-zoom-image="/img/details_img/12b7d148431ac7529cfd83a03192f22a.jpg">
+												<img src="/img/details_img/d4372f5d2bcb8a68ec8b010d47783e97.jpg" width="100">
+								 			</a>
+								 			<a href="#" class="elevatezoom-gallery" data-image="/img/details_img/19a4068ac610b03a4c7ed3de6a19bf28.jpg" data-zoom-image="/img/details_img/1d2b9020e1da99a1b89c1d7ad708349d.jpg">
+												<img src="/img/details_img/b092cc3804c6fca147cae8f9e9516af3.jpg" width="100">
+								 			</a>
+						 				</div>
+						 			</div>
 					 			<div class="rightClick">&gt;</div>
-					 		</dd>
-					 	</dl>
+					 		</div>
+					 	</div>	
 					 	<input type="button" name="" id="" value="推荐" />
 					 	<input type="button" name="" id="" value="收藏" />
 					 </div>
@@ -141,5 +161,9 @@
 		<!--网页尾部-->
 		<div class="footer"></div>
 		<script src="/lib/requirejs/require.js" data-main="/js/detail.js"></script>
+		<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    	<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+		<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    	<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>

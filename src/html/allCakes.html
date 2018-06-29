@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>micamika</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<!-- Bootstrap -->
+    	<link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/css/header.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/footer.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/sideBar.css"/>
@@ -71,25 +75,26 @@
 				
 				<!--蛋糕模板-->
 				<div id="cakes">
-					<script type="text/html" id="cakeTemp">
-						{{each list currObj}}
-						<dl class="cakeTemplate">
-							<dt>
-								<a href="/html/detail.html"><img src="{{currObj.img}}"/></a>
-							</dt>
-							<dd>
-								<a href="#" class="title">{{currObj.title}}</a>
-								<p>￥{{currObj.price}}</p>
-								<div class="cakeNumber">
-		              				<a href="javascript:void(0)" class="induce">-</a>
-		              				<input type="text" min="1" max="20" value="1">
-		              				<a href="javascript:void(0)" class="increase">+</a>
-								</div>
-								<a href="/html/cart.html" class="addToCart">加入购物车</a>
-							</dd>
-						</dl>
-						{{/each}}
-					</script>
+						<script type="text/html" id="cakeTemp">
+							{{each list currObj}}
+							<dl class="cakeTemplate">
+								<dt>
+									<a href="/html/detail.html"><img src="{{currObj.img}}" class="img"/></a>
+								</dt>
+								<dd>
+									<span class="id" style="display: none;">{{currObj.id}}</span>
+									<a href="#" class="title">{{currObj.title}}</a>
+									<p class="price">￥{{currObj.price}}</p>
+									<div class="cakeNumber">
+			              				<a href="javascript:void(0)" class="induce">-</a>
+			              				<input type="text" value="1" class="changeNum">
+			              				<a href="javascript:void(0)" class="increase">+</a>
+									</div>
+									<a href="/html/cart.html" class="addToCart">加入购物车</a>
+								</dd>
+							</dl>
+							{{/each}}
+						</script>
 					<ul class="list">
 						<li><a href="#">&lt;</a></li>
 						<li><a href="#">1</a></li>
@@ -141,5 +146,9 @@
 		<!--网页尾部-->
 		<div class="footer"></div>
 		<script src="/lib/requirejs/require.js" data-main="/js/allCakes.js"></script>
+		<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    	<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+		<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    	<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>

@@ -47,8 +47,6 @@ gulp.task("copy-mock",function(){
 	.pipe(gulp.dest("dist/mock"))
 })
 
-
-
 //将上面复制任务合并为一个
 gulp.task("copy",["copy-lib", "copy-image", "copy-mock"])
 

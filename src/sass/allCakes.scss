@@ -11,6 +11,8 @@ em, i, b, strong{
 }
 ul, ol { list-style:none; } 
 a {text-decoration:none; }
+a:hover{text-decoration:none;}
+a:focus{text-decoration:none;}
 
 html,body{
     height: 100%;
@@ -157,7 +159,7 @@ html,body{
                         }
                         input{
                             width: 30px;
-                            height: 19px;
+                            height: 21px;
                             float: left;
                             line-height: 21px;
                             text-align: center;

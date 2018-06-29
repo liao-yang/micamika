@@ -11,6 +11,8 @@ em, i, b, strong{
 }
 ul, ol { list-style:none; } 
 a {text-decoration:none; }
+a:hover{text-decoration:none;}
+a:focus{text-decoration:none;}
 
 html,body{
     height: 100%;
@@ -29,31 +31,8 @@ html,body{
             text-align: center;
             line-height: 70px;
         }
-        .process{
-            width: 360px;
-            height: 34px;
-            float: right;
-            p{
-                height: 30px;
-                float: left;
-                background-color: #ddd;
-                border-radius: 17px;
-                font-size: 12px;
-                text-align: center;
-                line-height: 30px;
-            }
-            p:nth-of-type(1){
-                width: 100px;
-            }
-            p:nth-of-type(2){
-                width: 150px;
-            }
-            p:nth-of-type(3){
-                width: 108px;
-            }
-        }
         .buy{
-            height: 332px;
+            min-height: 332px;
             margin-top: 53px;
             border: 1px solid #e6e6e6;
             margin-bottom: 20px;
@@ -111,6 +90,9 @@ html,body{
                         a{
                           color: #dc4f45;  
                         }
+                        span{
+                            cursor: pointer;
+                        }
                     }
                     .cakeNumber{
                         width: 74px;
@@ -129,7 +111,7 @@ html,body{
                         }
                         input{
                             width: 30px;
-                            height: 19px;
+                            height: 21px;
                             float: left;
                             line-height: 21px;
                             text-align: center;

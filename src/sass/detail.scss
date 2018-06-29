@@ -11,6 +11,8 @@ em, i, b, strong{
 }
 ul, ol { list-style:none; } 
 a {text-decoration:none; }
+a:hover{text-decoration:none;}
+a:focus{text-decoration:none;}
 
 html,body{
     height: 100%;
@@ -34,8 +36,13 @@ html,body{
                 width: 500px;
                 height: 709px;
                 float: left;
-                dd{
+                .cakeImage_wrap{
+                    width: 500px;
+                }
+                .smallImg{
+                    width: 500px;
                     height: 117px;
+                    overflow: hidden;
                     @mixin _clik {
                         width: 17px;
                         height: 117px;
@@ -49,28 +56,51 @@ html,body{
                     .leftClick{
                         @include _clik
                     }
-                    .smallImg{
-                        width: 460px;
-                        height: 117px;
-                        float: left;
-                        overflow: hidden;
-                        padding-top: 10px;
-                        ul{
-                            width: 1000px;
-                                li{
-                                float: left;
-                                img{
-                                    height: 100px;
-                                    margin-left: 13px;
-                                }
-                            }
-                        }
-                        
-                    }
                     .rightClick{                        
                         @include _clik
                         float: right;
                     }
+                    ._wrap{
+                        width: 450px;
+                        float: left;
+                        overflow: hidden;
+                        position: relative;
+                        .imgs{
+                            width: 1000px;
+                            height: 117px;
+//                          position: absolute;
+                            a{
+                                float: left;
+                                margin-left: 12px;
+                                margin-top: 10px;
+                            }
+                            .active{
+                                opacity: 0.6;
+                            }
+                        }
+                        
+                    }
+                    
+                    //                  {
+//                      width: 460px;
+//                      height: 117px;
+//                      float: left;
+//                      overflow: hidden;
+//                      padding-top: 10px;
+//                      position: relative;
+//                      ul{
+//                          width: 1000px;
+//                          position: absolute;
+//                              li{
+//                              float: left;
+//                              img{
+//                                  height: 100px;
+//                                  margin-left: 13px;
+//                              }
+//                          }
+//                      }
+//                      
+//                  }
                 }
                 input{
                     width: 79px;
@@ -187,7 +217,7 @@ html,body{
                         }
                         input{
                             width: 30px;
-                            height: 19px;
+                            height: 21px;
                             float: left;
                             line-height: 21px;
                             text-align: center;
