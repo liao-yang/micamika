@@ -14,7 +14,6 @@ require(["config"],function(){
 			// 已有选购商品
 			let html = template ("cartCakes",{cartCakes:products});
 			$(".cartContent").html(html);
-			console.log(products);
 			calcTotal();
 			
 			/* 删除 */
@@ -36,6 +35,17 @@ require(["config"],function(){
 				}
 				// 计算合计
 				calcTotal();
+				//修改header和sideBar中购物车的数量
+				$(function(){
+					let sum = 0;
+					$.cookie.json = true;
+					const _cookie = $.cookie("products")
+					$(_cookie).each(function(index,element){
+						 sum += Number(element.amount);
+					})
+					$(".header_middle_wrap .cart span").text(sum);
+					$(".miniCart span").text(sum);
+				})
 			});
 			
 			//点击按钮更改数量
@@ -44,6 +54,7 @@ require(["config"],function(){
 				const id = $(this).parent().parent().parent().parent().find(".id").text().slice(5);
 				// 获取指定id商品在 products 数组中的下标
 				const index = exist(id, products);
+				
 				 //修改指定索引处元素的 amount 属性值
 				const prod = products[index];
 				if ($(this).is(".induce")) {
@@ -62,6 +73,17 @@ require(["config"],function(){
 				$(this).parent().parent().siblings(".total").text(("￥"+prod.price*prod.amount));
 				// 计算合计
 				calcTotal();
+				//修改header和sideBar中购物车的数量
+				$(function(){
+					let sum = 0;
+					$.cookie.json = true;
+					const _cookie = $.cookie("products")
+					$(_cookie).each(function(index,element){
+						 sum += Number(element.amount);
+					})
+					$(".header_middle_wrap .cart span").text(sum);
+					$(".miniCart span").text(sum);
+				})
 			});
 			
 			//输入框修改数量
@@ -84,10 +106,21 @@ require(["config"],function(){
 				// 覆盖保存回 cookie 中
 				$.cookie("products", products, {expires:7, path:"/"});
 				// 更新小计金额
-				$(this).parent().parent().siblings(".integral").text((prod.price*prod.amount));
-				$(this).parent().parent().siblings(".total").text(("￥"+prod.price*prod.amount));
+				$(this).parent().parent().siblings(".integral").text(prod.price*prod.amount);
+				$(this).parent().parent().siblings(".total").text("￥"+(prod.price*prod.amount));
 				// 计算合计
 				calcTotal();
+				//修改header和sideBar中购物车的数量
+				$(function(){
+					let sum = 0;
+					$.cookie.json = true;
+					const _cookie = $.cookie("products")
+					$(_cookie).each(function(index,element){
+						 sum += Number(element.amount);
+					})
+					$(".header_middle_wrap .cart span").text(sum);
+					$(".miniCart span").text(sum);
+				})
 			});
 			
 			//清空购物车
@@ -95,6 +128,17 @@ require(["config"],function(){
 				products.splice(0);
 				$.cookie("products", products, {expires:7, path:"/"});
 				$(".buy").html(`<h2 style="text-align:center;">购物车内容为空</h2>`);
+				//修改header和sideBar中购物车的数量
+				$(function(){
+					let sum = 0;
+					$.cookie.json = true;
+					const _cookie = $.cookie("products")
+					$(_cookie).each(function(index,element){
+						 sum += Number(element.amount);
+					})
+					$(".header_middle_wrap .cart span").text(sum);
+					$(".miniCart span").text(sum);
+				})
 			})
 			
 			
@@ -113,7 +157,6 @@ require(["config"],function(){
 			/* 计算合计金额 */
 			
 			function calcTotal() {
-				// 获取选中的复选框，遍历每个复选框，查找所在行中的小计，累加
 				let sum = 0;
 				$(".addCake").each(function(index, element){
 					// index 是当前遍历到的DOM元素在数组中的下标
@@ -123,7 +166,7 @@ require(["config"],function(){
 					
 				});
 				// 显示总金额
-				$('._totalPrice').text("￥"+sum);
+				$('._totalPrice').text("￥"+(sum).toFixed(2));
 			}
 		});
 	});

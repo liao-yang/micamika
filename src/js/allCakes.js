@@ -31,7 +31,7 @@ require(["config"],function(){
 					title : $(this).parent().parent().find(".title").text(),
 					price : $(this).parent().parent().find(".price").text().slice(1),
 					img : $(this).parent().parent().find(".img").attr("src"),
-					amount : $(this).parent().find(".changeNum").val()
+					amount : Number($(this).parent().find(".changeNum").val())
 				}
 				console.log(currPro);
 				//使用cookie插件保存修改cookie
@@ -45,7 +45,7 @@ require(["config"],function(){
 				if (index === -1) {
 					prodCookie.push(currPro);
 				}else {
-					prodCookie[index].amount ++;
+					prodCookie[index].amount += currPro.amount;
 				}
 				//将当前选购的商品信息保存到 cookie 中：即将数组存回cookie
 				$.cookie("products",prodCookie,{experis:7,path:"/"});

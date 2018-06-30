@@ -68,7 +68,6 @@ html,body{
                         .imgs{
                             width: 1000px;
                             height: 117px;
-//                          position: absolute;
                             a{
                                 float: left;
                                 margin-left: 12px;
@@ -78,29 +77,7 @@ html,body{
                                 opacity: 0.6;
                             }
                         }
-                        
                     }
-                    
-                    //                  {
-//                      width: 460px;
-//                      height: 117px;
-//                      float: left;
-//                      overflow: hidden;
-//                      padding-top: 10px;
-//                      position: relative;
-//                      ul{
-//                          width: 1000px;
-//                          position: absolute;
-//                              li{
-//                              float: left;
-//                              img{
-//                                  height: 100px;
-//                                  margin-left: 13px;
-//                              }
-//                          }
-//                      }
-//                      
-//                  }
                 }
                 input{
                     width: 79px;
@@ -182,6 +159,10 @@ html,body{
                             margin-bottom: 5px;
                             background-color: #e2e5e9;
                             border: none;
+                             outline: none;
+                        }
+                        .inputChecked{
+                            outline: 1px solid #46B8DA;
                         }
                     }             
                 }
