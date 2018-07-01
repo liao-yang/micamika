@@ -6,7 +6,7 @@ require(["config"],function(){
 				gallery:'gallery_01', 
 				cursor: 'pointer', 
 				galleryActiveClass: "active"});
-			//左边切换图片
+			//右边切换图片
 			$(".rightClick").on("click",function(){
 				let margin_left = parseInt($(".imgs").css("marginLeft"));
 				if(margin_left<-339){
@@ -15,7 +15,7 @@ require(["config"],function(){
 					$(".imgs").animate({marginLeft:margin_left-113+"px"},"100");
 				}
 			});
-			//右边切换图片
+			//左边切换图片
 			$(".leftClick").on("click",function(){
 				let margin_left = parseInt($(".imgs").css("marginLeft"));
 				if (margin_left>-113){
@@ -64,7 +64,7 @@ require(["config"],function(){
 						title : "摩天轮 Ferris Wheel",
 						price : $(".addCart h3").text().slice(1),
 						img : "/img/allCakes_img/ff22def1f569b0710b45ed4d3d3b3ed4.jpg",
-						amount : $(".changeNum").val()
+						amount : Number($(".changeNum").val()) 
 					}
 					//使用cookie插件保存修改cookie
 					//配置cookie
@@ -76,7 +76,7 @@ require(["config"],function(){
 					if (index === -1) {
 						prodCookie.push(currPro);
 					}else {
-						prodCookie[index].amount ++;
+						prodCookie[index].amount += currPro.amount;
 					}
 					//将当前选购的商品信息保存到 cookie 中：即将数组存回cookie
 					$.cookie("products",prodCookie,{experis:7,path:"/"});

@@ -28,62 +28,16 @@ html,body{
         height: 589px;
         position: relative;
         overflow: hidden;
-        .carousel-inner{
-            width: 100%; 
-            height: 589px;          
-            div{
-                height: 589px;
-                img{
-                    width: 1920px;
-                    height: 589px;
-//                  position: absolute;
-//                  left: 50%;
-//                  margin-left: -960px;
-                }
-
-            }
-            .leftArrow{
-                width: 45px;
-                height: 82px;
-                position: absolute;
-                top: 253px;
-                background: url(../img/index_img/but1.png) no-repeat -105px 0;
-            }
-            .leftArrow:hover{
-                background: url(../img/index_img/but2.png) no-repeat -105px 0;
-            }
-            .rightArrow{
-                width: 45px;
-                height: 82px;
-                position: absolute;
-                right: 35px;
-                top: 253px;
-                background: url(../img/index_img/but1.png) no-repeat 0 0;
-            }
-            .rightArrow:hover{
-                background: url(../img/index_img/but2.png) no-repeat 0 0;
-            }
-        }
-        .list{
-            position: absolute;
-            right: 40px;
-            bottom: 10px;
+        ul{
+            height: 589px;
             li{
-                width: 20px;
-                height: 20px;
-                float: left;
-                margin-left: 2px;
-                text-align: center;
-                line-height: 20px;
-                background-color: #fff;
-                a{
-                    color: #666;
-                }
+                width: 1920px;
+                height: 589px;
+                position: absolute;
+                left: 50%;
+                margin-left: -960px;
             }
-            li:hover{
-                background: #dc4f45;
-            }
-        }                
+        }            
     }
     /*立即购买*/
     .purchase{
@@ -92,7 +46,7 @@ html,body{
         position: absolute;
         background: url(../img/index_img/bj1.png);
         left: 50%;
-        top: 546px;
+        top: 539px;
         margin-left: -470px;
         .purchase_left{
             width: 80px;
@@ -142,16 +96,26 @@ html,body{
         background: url(../img/index_img/recommend.png) no-repeat 0 0 #e2e5e9;
         overflow: hidden;
         .recommond_wrap{
-            width: 1152px;
+            width: 1151px;
             height: 538px;
             background-color: #fff;
             margin: 314px auto;
             margin-bottom: 0;
-            position: relative;
-            .side_img{
-                float: left;
-                width: 456px;
-                height: 538px;
+            position: relative; 
+            overflow: hidden;
+            .recBox{
+                width: 5000px;
+                .recommond1{
+                    float: left;
+                }
+                .recommond2{
+                    float: left;
+                }
+                .side_img{
+                    float: left;
+                    width: 456px;
+                    height: 538px;
+                }
             }
             .cake_list{
                 width: 695px;
@@ -206,21 +170,23 @@ html,body{
                    @include cake_dl; 
                 }
             }
-            .leftArrow{
+            @mixin arrow{
                 width: 44px;
                 height: 52px;
-                background: url(../img/index_img/main.png) no-repeat -8px -306px;
                 position: absolute;
-                left: -24px;
-                top: 228px;              
+                top: 228px;
+                cursor: pointer;
+            }
+            .leftArrow{
+                @include arrow;
+                background: url(../img/index_img/main.png) no-repeat -8px -306px;
+                left: -12px;    
+                padding-left: 5px;       
             }
             .rightArrow{
-                width: 44px;
-                height: 52px;
+                @include arrow;
                 background: url(../img/index_img/main.png) no-repeat -148px -309px;
-                position: absolute;
-                right: -20px;
-                top: 228px;              
+                right: -12px;           
             }
         }
         .recommond_more{

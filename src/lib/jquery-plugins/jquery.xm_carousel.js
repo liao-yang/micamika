@@ -37,8 +37,8 @@
 							<div class="pages">
 								${points}
 							</div>
-							<div class="prev">&lt;</div>
-							<div class="next">&gt;</div>`;
+							<div class="prev"></div>
+							<div class="next"></div>`;
 			// 将生成的HTML结构放置到容器中
 			this.container.html(html);
 			// 设置元素CSS样式
@@ -56,7 +56,8 @@
 				height: this.height,
 				position: "absolute",
 				top: 0,
-				left: 0,
+				left: this.width/2,
+				marginLeft: -960,
 				display: "none"
 			}).first().show();
 			// .pages
@@ -64,8 +65,8 @@
 				position: "absolute",
 				width: "100%",
 				height: 30,
-				background: "#000",
-				bottom: 0
+				bottom: 0,
+				paddingLeft:1150
 			});
 			// 所有小圆点
 			this.points = $("i", this.container);
@@ -81,19 +82,21 @@
 			});
 			// 向前/后
 			$(".prev,.next", this.container).css({
-				width: 50,
-				height: 100,
-				background: "#000",
+				width: 45,
+				height: 82,
+				background: "url(/img/index_img/but1.png) no-repeat -105px 0",
 				lineHeight: "100px",
 				textAlign: "center",
 				color: "#fff",
 				position: "absolute",
 				top:0,
 				bottom: 0,
-				margin:"auto"
+				margin:"auto",
+				cursor:"pointer"
 			});
 			$(".next",this.container).css({
-				right: 0
+				right: 35,
+				background: "url(/img/index_img/but1.png) no-repeat 0 0",
 			});
 			// 判断是否显示按钮
 			if (!this.showBtn)
