@@ -103,7 +103,8 @@ require(["config"],function(){
 				}
 				return -1;
 			}
-			//加入购物车动画
+			
+			
 			
 		});
 	});

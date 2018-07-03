@@ -66,7 +66,7 @@
 				width: "100%",
 				height: 30,
 				bottom: 0,
-				paddingLeft:1150
+				paddingLeft:1098
 			});
 			// 所有小圆点
 			this.points = $("i", this.container);
